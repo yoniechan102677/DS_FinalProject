@@ -19,8 +19,8 @@ public class WordCounter {
 		URL url = new URL(this.urlStr);
 		URLConnection conn = url.openConnection();
 		InputStream in = conn.getInputStream();
-		BufferedReader br = new BufferedReader(new InputStreamReader(in));
-	
+		BufferedReader br = new BufferedReader(new InputStreamReader(in,"UTF-8"));
+		//使用UTF-8讀取網頁內容
 		String retVal = "";
 	
 		String line = null;
@@ -51,5 +51,8 @@ public class WordCounter {
 		}
 	
 		return retVal;
+    }
+    public String getContent() {
+    	return this.content;
     }
 }
