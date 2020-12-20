@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
-//幫每個node計算自己的網頁分數
 public class WebPage {
 	public String url;
 	public String name;
@@ -34,7 +33,7 @@ public class WebPage {
 			score += k.getCount() * k.weight;
 			//System.out.println(counter.getContent());
 			
-			System.out.println(k);
+			//System.out.println(k);
 		}
 	}
 
